@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#1C1C1C" />
+    <meta name="description" content="Artools Precision Pen — Caneta premium com engenharia suíça, tinta PigmaNTIUM e alumínio aerospacial. Precisão de 0,1 mm." />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <title>Artools Precision Pen — Caneta Premium</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Textura noise sutil — animations-gemini2 -->
+    <div class="noise-overlay" aria-hidden="true"></div>
+    <!-- Barra de progresso do scroll -->
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+    <!-- Navbar -->
+    <nav class="nav" id="nav">
+        <a href="#" class="nav-logo">ARTools</a>
+        <ul class="nav-menu">
+            <li><a href="#produto">Produto</a></li>
+            <li><a href="#especificacoes"><span class="nav-text-long">Especificações</span><span class="nav-text-short" aria-hidden="true">Espec.</span></a></li>
+            <li><a href="#comprar">Comprar</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section (design_system: vídeo atrás, tema escuro) -->
+    <section class="hero" id="hero">
+        <!-- Animated grid overlay -->
+        <div class="hero-grid"></div>
+
+        <!-- Ambient orbs (tamanhos responsivos via clamp) -->
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
+        <div class="hero-orb hero-orb-3"></div>
+
+        <!-- Vídeo como BACKGROUND (atrás de tudo) -->
+        <div class="hero-video" id="heroVideoWrap">
+            <video id="heroVideo" autoplay muted playsinline loop preload="auto" disablePictureInPicture>
+                <source src="raw_files/video2.mp4" type="video/mp4" />
+            </video>
+            <div class="hero-video-fallback" aria-hidden="true"></div>
+        </div>
+
+        <!-- Gradient overlay -->
+        <div class="hero-gradient"></div>
+
+        <!-- Hero Inner (estrutura design_system) -->
+        <div class="hero-inner">
+            <!-- Top meta -->
+            <div class="hero-top-meta" id="heroTopMeta">
+                <span class="hero-top-meta-badge">Artools Precision Pen</span>
+                <div class="hero-top-meta-pills">
+                    <span class="hero-top-meta-pill">2025</span>
+                    <span class="hero-top-meta-pill">Premium</span>
+                </div>
+            </div>
+
+            <!-- Hero Content (sobre o vídeo) -->
+            <div class="hero-content">
+                <div class="hero-title-line">
+                    <h1 class="hero-title outline" id="titleLine1">Artools</h1>
+                </div>
+                <div class="hero-title-line">
+                    <h1 class="hero-title solid" id="titleLine2">Precision</h1>
+                </div>
+                <div class="hero-title-line">
+                    <h1 class="hero-title solid" id="titleLine3">Pen</h1>
+                </div>
+                <div class="hero-subtitle-row" id="subtitleRow">
+                    <p class="hero-subtitle" id="subtitle">
+                        A caneta que une precisão de engenharia e design minimalista. 
+                        Para quem exige o melhor em cada traço.
+                    </p>
+                    <div class="hero-buttons" id="buttons">
+                    <a href="#produto" class="btn-primary">
+                        Comprar Agora
+                        <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                    <a href="#especificacoes" class="btn-secondary">
+                        Ver Detalhes
+                        <span class="arrow">↓</span>
+                    </a>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator — centro inferior da hero -->
+        <div class="scroll-indicator" id="scrollIndicator">
+            <span>Scroll</span>
+            <div class="arrow-down"></div>
+        </div>
+
+        <!-- Section number -->
+        <div class="hero-meta" id="heroMeta">
+            <div class="hero-meta-line"></div>
+            <span class="hero-meta-num">01</span>
+        </div>
+
+    </section>
+
+    <!-- Marquee strip — design_system / design_system4 (entre hero e produto) -->
+    <div class="marquee-strip">
+        <div class="marquee-container">
+            <div class="marquee-content">
+                <span class="marquee-item">Precisão 0,1 mm</span>
+                <span class="marquee-dot">•</span>
+                <span class="marquee-item">PigmaNTIUM</span>
+                <span class="marquee-dot">•</span>
+                <span class="marquee-item">Engenharia Suíça</span>
+                <span class="marquee-dot">•</span>
+                <span class="marquee-item">Alumínio Aerospacial</span>
+                <span class="marquee-dot">•</span>
+                <span class="marquee-item">Ponteira Japonesa</span>
+                <span class="marquee-dot">•</span>
+                <span class="marquee-item">Arquivos Permanentes</span>
+                <span class="marquee-dot">•</span>
+            </div>
+            <div class="marquee-content" aria-hidden="true">
+                <span class="marquee-item">Precisão 0,1 mm</span>
+                <span class="marquee-dot">•</span>
+                <span class="marquee-item">PigmaNTIUM</span>
+                <span class="marquee-dot">•</span>
+                <span class="marquee-item">Engenharia Suíça</span>
+                <span class="marquee-dot">•</span>
+                <span class="marquee-item">Alumínio Aerospacial</span>
+                <span class="marquee-dot">•</span>
+                <span class="marquee-item">Ponteira Japonesa</span>
+                <span class="marquee-dot">•</span>
+                <span class="marquee-item">Arquivos Permanentes</span>
+                <span class="marquee-dot">•</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-divider section-divider--light" aria-hidden="true"></div>
+
+    <!-- ========================================
+         SEÇÃO 2 — O PRODUTO
+    ======================================== -->
+    <section class="section-product" id="produto">
+        <div class="section-product-orb section-product-orb-1"></div>
+        <div class="section-product-orb section-product-orb-2"></div>
+        <div class="section-product-orb section-product-orb-3"></div>
+        <div class="section-product-inner">
+            <div class="section-product-content">
+                <span class="section-product-tag reveal">02 / O Produto</span>
+                <div class="section-product-headline-line reveal">
+                    <h2 class="section-product-headline outline">Não é só</h2>
+                </div>
+                <div class="section-product-headline-line reveal">
+                    <h2 class="section-product-headline solid">uma caneta.</h2>
+                </div>
+                <p class="section-product-copy reveal">
+                    É a extensão da mão de quem não aceita quase. Engenharia suíça, alumínio aerospacial e tinta PigmaNTIUM — quando a ponta de 0,1 mm toca o papel, o traço que surge é tão preciso que parece que a ideia nasceu pronta. O corpo em liga 6000 anodizada, a mesma usada em componentes de foguetes. A tinta com nanopigmentos que resiste à água, à luz e ao tempo. O equilíbrio que fica na mão como se estivesse esperando por você. Designers, arquitetos, ilustradores: esta não é a caneta que você escolhe. É a que escolhe você.
+                </p>
+                <div class="section-product-tech">
+                    <div class="tech-card reveal">
+                        <div class="tech-card-title">Engenharia Suíça</div>
+                        <div class="tech-card-desc">Precisão milimétrica desenvolvida em laboratórios de ótica. Tolerância de 0,002 mm na ponteira.</div>
+                    </div>
+                    <div class="tech-card reveal">
+                        <div class="tech-card-title">Tinta PigmaNTIUM</div>
+                        <div class="tech-card-desc">Nanopigmentos de carbono que resistem água, luz UV e décadas. Arquivos permanentes.</div>
+                    </div>
+                    <div class="tech-card reveal">
+                        <div class="tech-card-title">Alumínio Aerospacial</div>
+                        <div class="tech-card-desc">Liga 6000 anodizada tipo II. A mesma usada em fuselagens e componentes estruturais.</div>
+                    </div>
+                    <div class="tech-card reveal">
+                        <div class="tech-card-title">Ponteira Japonesa</div>
+                        <div class="tech-card-desc">Fabricada em Sakura. Aço inox endurecido. 0,1 mm com precisão cirúrgica.</div>
+                    </div>
+                </div>
+                <div class="section-product-stat reveal">
+                    <div class="section-product-stat-value">0,1 mm</div>
+                    <div class="section-product-stat-label">Precisão cirúrgica em cada traço. Para quem não admite margem de erro.</div>
+                </div>
+            </div>
+            <div class="section-product-image reveal">
+                <div class="section-product-image-inner">
+                    <img src="raw_files/artools-pen-9x16.jpg" alt="Artools Precision Pen — Engenharia suíça, tinta PigmaNTIUM, alumínio aerospacial" loading="lazy" decoding="async" />
+                </div>
+            </div>
+        </div>
+        <div class="section-product-meta">
+            <div class="section-product-meta-line"></div>
+            <span class="section-product-meta-num">02</span>
+        </div>
+    </section>
+
+    <!-- Section divider — animations-gemini2 -->
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <!-- ========================================
+         SEÇÃO 3 — ESPECIFICAÇÕES
+    ======================================== -->
+    <section class="section-specs" id="especificacoes">
+        <div class="section-specs-orb section-specs-orb-1"></div>
+        <div class="section-specs-orb section-specs-orb-2"></div>
+        <div class="section-specs-inner">
+            <span class="section-specs-tag reveal">03 / Especificações</span>
+            <h2 class="section-specs-headline reveal">Precisão em números.</h2>
+            <p class="section-specs-sub reveal">Cada detalhe projetado para quem exige o máximo.</p>
+            <div class="section-specs-grid">
+                <div class="spec-card reveal">
+                    <svg class="spec-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2v20M12 2l4 4M12 2L8 6M12 22l4-4M12 22l-4-4"/>
+                        <circle cx="12" cy="12" r="2"/>
+                    </svg>
+                    <div class="spec-card-value">0,1 mm</div>
+                    <div class="spec-card-label">Ponteira · Tolerância 0,002 mm</div>
+                </div>
+                <div class="spec-card reveal">
+                    <svg class="spec-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+                        <circle cx="12" cy="12" r="5"/>
+                    </svg>
+                    <div class="spec-card-value">PigmaNTIUM</div>
+                    <div class="spec-card-label">Nanopigmentos · Água, UV, arquivo</div>
+                </div>
+                <div class="spec-card reveal">
+                    <svg class="spec-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="8" width="18" height="12" rx="1"/>
+                        <path d="M7 8V6a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/>
+                    </svg>
+                    <div class="spec-card-value">Liga 6000</div>
+                    <div class="spec-card-label">Alumínio anodizado tipo II</div>
+                </div>
+                <div class="spec-card reveal">
+                    <svg class="spec-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 6h16M4 12h16M4 18h10"/>
+                    </svg>
+                    <div class="spec-card-value">14 × 1,2 cm</div>
+                    <div class="spec-card-label">Comprimento × diâmetro</div>
+                </div>
+                <div class="spec-card reveal">
+                    <svg class="spec-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M12 6v6l4 2"/>
+                    </svg>
+                    <div class="spec-card-value">~8 g</div>
+                    <div class="spec-card-label">Peso · Equilíbrio perfeito</div>
+                </div>
+                <div class="spec-card reveal">
+                    <svg class="spec-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                    <div class="spec-card-value">Permanente</div>
+                    <div class="spec-card-label">Resistente a décadas</div>
+                </div>
+            </div>
+            <div class="section-specs-cta reveal">
+                <p>Pronto para o próximo traço?</p>
+                <a href="#comprar" class="btn-specs">
+                    Fale conosco
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="section-specs-meta">
+            <div class="section-specs-meta-line"></div>
+            <span class="section-specs-meta-num">03</span>
+        </div>
+    </section>
+
+    <!-- Section divider -->
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <!-- ========================================
+         SEÇÃO 4 — DESTAQUE COM VÍDEO + GLOW
+    ======================================== -->
+    <section class="section-glow" id="comprar">
+        <div class="section-glow-video" id="sectionGlowVideo">
+            <video autoplay muted playsinline loop preload="auto">
+                <source src="raw_files/video2.mp4" type="video/mp4" />
+            </video>
+            <div class="section-glow-fallback" aria-hidden="true"></div>
+        </div>
+        <div class="section-glow-overlay"></div>
+        <div class="section-glow-inner">
+            <div class="glow-box reveal">
+                <span class="glow-box-tag">04 / O essencial</span>
+                <div class="glow-box-value">0,1 mm</div>
+                <p class="glow-box-label">Precisão cirúrgica. O traço que não admite margem de erro.</p>
+                <div class="glow-box-cta">
+                    <a href="#produto">Comprar agora</a>
+                </div>
+            </div>
+        </div>
+        <div class="section-glow-meta">
+            <div class="section-glow-meta-line"></div>
+            <span class="section-glow-meta-num">04</span>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
