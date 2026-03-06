@@ -54,6 +54,23 @@
         }
 
         /* =============================================
+           MARQUEE — fix animação estática no mobile (iOS Safari)
+           Força reinício da animação CSS na primeira interação touch
+           ============================================= */
+        if ('ontouchstart' in window) {
+            const marqueeContents = document.querySelectorAll('.marquee-content');
+            const kickMarquee = () => {
+                marqueeContents.forEach(el => {
+                    el.style.animation = 'none';
+                    el.offsetHeight; /* reflow */
+                    el.style.animation = 'marqueeScroll 35s linear infinite';
+                });
+            };
+            document.addEventListener('touchstart', kickMarquee, { once: true, passive: true });
+            document.addEventListener('scroll', kickMarquee, { once: true, passive: true });
+        }
+
+        /* =============================================
            VÍDEO HERO — rodando em loop + recuperação de travamento
            ============================================= */
         const video = document.getElementById('heroVideo');
